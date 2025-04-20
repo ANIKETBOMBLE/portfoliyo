@@ -7,8 +7,11 @@ import { IoLogoInstagram } from "react-icons/io";
 import { motion } from "framer-motion";
 import myiMage from './assest/IMG.jpg';
 import { CgMenuMotion } from "react-icons/cg";
-import ContactSection from './about';
+import ContactSection from './About.jsx';
 import S from './S.jsx';
+import About from './About.jsx';
+import Footer from './compontus/Footer.jsx';
+import Project from './project.jsx';
 
 
 
@@ -17,7 +20,7 @@ export default function Home() {
 
   return (
 	<> 
-    <main className="h-screen flex justify-around items-center border bg-white">
+    <main className="h-screen flex justify-around items-center border bg-black text-white">
     
       <motion.section
         className="flex flex-col items-center text-center gap-6 w-[400px] p-6"
@@ -47,27 +50,12 @@ export default function Home() {
 		  
 alt='Profile' />
         {/* //   src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"     alt="Profile" */}
+</motion.section></main>
 
-		
-      </motion.section>
-	  
-    </main>
-
-	<main className='h-screen border bg-blue-950'>
-		<section  className='text-center text-4xl mt-10  hover:underline font-light text-white'>PROJECTS</section>
-		<section className='flex justify-center items-center mt-10 gap-5'>
-			<div className='w-80 h-80 bg-slate-300 rounded-lg hover:bg-slate-400 hover:scale-110 hover:transition-all 400ms'></div>
-			<div className='w-80 h-80 bg-slate-300 rounded-lg hover:bg-slate-400 hover:scale-110 hover:transition-all 400ms'></div>
-			<div className='w-80 h-80 bg-slate-300 rounded-lg hover:bg-slate-400 hover:scale-110 hover:transition-all 400ms'></div>
-	</section>
-	</main>
-	<main className='h-100 border'>
-            	<S />
-	</main>
-	<main>
-	<ContactSection />
-	</main>
-
+  <main><Project /></main>
+	<main><S /></main>
+	<main><About  /></main>
+  <main><Footer /></main>
 	
 	</>
   )

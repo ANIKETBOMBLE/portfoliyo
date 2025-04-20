@@ -20,7 +20,7 @@ const skills = [
 
 const SkillsSection = () => {
   return (
-    <main className="h-100 border">
+    <main className="h-100 border bg-black text-white">
       <motion.section 
         className="text-center text-4xl mt-10 font-light"
         initial={{ opacity: 0, y: -20 }}

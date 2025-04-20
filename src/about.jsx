@@ -1,10 +1,12 @@
+import React from 'react'
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 import { CiLinkedin } from 'react-icons/ci';
 import { IoLogoInstagram } from 'react-icons/io';
 
-function ContactSection() {
+export default function About() {
+ {
 	const sendEmail = (e) => {
 		e.preventDefault();
 		const form = e.target;
@@ -40,7 +42,7 @@ function ContactSection() {
 	};
 
 	return (
-		<div className="main-div h-screen w-full flex flex-col bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 p-5">
+		<div className="main-div h-screen w-full flex flex-col bg-gradient-to-br from-blue-200 via-indigo-200 to-purple-100 p-5">
 			<section className="text-center text-3xl font-semibold text-gray-800 mt-5">ABOUT ME</section>
 
 			<div className="main flex flex-col lg:flex-row justify-center items-center mt-10 gap-10">
@@ -92,5 +94,4 @@ function ContactSection() {
 		</div>
 	);
 }
-
-export default ContactSection;
+}

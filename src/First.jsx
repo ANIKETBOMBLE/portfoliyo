@@ -7,7 +7,6 @@ function First() {
 	<div>
 	  <Header />
 	  <Outlet />
-	  <Footer />
 	</div>
   )
 }

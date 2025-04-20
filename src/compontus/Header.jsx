@@ -26,7 +26,8 @@ export default function Header() {
 	
 			<li className='hover:black hover:font-semibold' ><Link to="/">HOME</Link></li>
 			<li className='hover:black hover:font-semibold' id="/skills" ><Link to="/skills"> SKILLS</Link></li>
-			<li className='hover:black hover:font-semibold'id="/about">ABOUT ME</li>
+			<li className='hover:black hover:font-semibold'> <Link to="/Project">PROJECT</Link></li>
+			<li className='hover:black hover:font-semibold'> <Link to="/About">ABOUT ME </Link></li>
 		</ul> 
 		
 	<SocialMenu/>
