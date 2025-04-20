@@ -7,6 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { CgMenuMotion } from "react-icons/cg";
 import React, { useState } from 'react'
 import SocialMenu from './menu';
+import { Link } from 'react-router'
 
 export default function Header() {
 	
@@ -23,8 +24,8 @@ export default function Header() {
 		<h1 className='font-bold p-4 text-2xl'>Hello..Coders!!</h1>
 		<ul className='flex gap-15 underline'> 
 	
-			<li className='hover:black hover:font-semibold' id='/'>HOME</li>
-			<li className='hover:black hover:font-semibold' id="/Skills" >PROJECTS</li>
+			<li className='hover:black hover:font-semibold' ><Link to="/">HOME</Link></li>
+			<li className='hover:black hover:font-semibold' id="/skills" ><Link to="/skills"> SKILLS</Link></li>
 			<li className='hover:black hover:font-semibold'id="/about">ABOUT ME</li>
 		</ul> 
 		

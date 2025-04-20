@@ -2,6 +2,15 @@ import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGithub } from 'react-icons/fa';
 import { SiExpressvpn, SiMongodb, SiTailwindcss } from 'react-icons/si';
 
+
+/**
+ * An array of skill objects, each containing an icon and a label.
+ * 
+ * @constant
+ * @type {Array<{icon: JSX.Element, label: string}>}
+ * @property {JSX.Element} icon - The JSX element representing the skill's icon.
+ * @property {string} label - The name of the skill.
+ */
 const skills = [
   { icon: <FaHtml5 />, label: 'HTML' },
   { icon: <FaCss3Alt />, label: 'CSS' },

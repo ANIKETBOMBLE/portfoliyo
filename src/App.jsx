@@ -6,6 +6,12 @@ import First from './First'
 import Header from "./compontus/Header";
 import Footer from "./compontus/Footer";
 import Home from './Home';
+import Skills from './skills';
+import ContactSection from './about';
+
+
+
+
 
 
 const router = createBrowserRouter([
@@ -16,6 +22,12 @@ const router = createBrowserRouter([
       {
         index:true,
         element: <Home/>
+      },{
+        path: "/skills",
+        element: <Skills />
+      },{
+        path: "/about",
+        element: <ContactSection />
       }
     ]
   }
