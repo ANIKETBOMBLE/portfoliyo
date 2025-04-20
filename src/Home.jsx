@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import myiMage from './assest/IMG.jpg';
 import { CgMenuMotion } from "react-icons/cg";
 import S from './S.jsx';
-import About from './About';
+import A from './A.jsx';
 import Footer from './compontus/Footer.jsx';
 import Project from './project.jsx';
 
@@ -54,7 +54,7 @@ alt='Profile' />
 
   <main><Project /></main>
 	<main><S /></main>
-	<main><About  /></main>
+	<main><A  /></main>
   <main><Footer /></main>
 	
 	</>

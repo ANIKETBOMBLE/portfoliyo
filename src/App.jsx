@@ -7,7 +7,7 @@ import Header from "./compontus/Header";
 import Footer from "./compontus/Footer";
 import Home from './Home';
 import Skills from './S.jsx';
-import About from './About.jsx' 
+import About from './A.jsx' 
 import Project from './project.jsx';
 
 

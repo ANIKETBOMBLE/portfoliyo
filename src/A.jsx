@@ -5,7 +5,7 @@ import { FaGithub } from 'react-icons/fa';
 import { CiLinkedin } from 'react-icons/ci';
 import { IoLogoInstagram } from 'react-icons/io';
 
-export default function About() {
+export default function A() {
  
 	const sendEmail = (e) => {
 		e.preventDefault();
