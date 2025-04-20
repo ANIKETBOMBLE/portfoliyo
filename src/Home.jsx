@@ -25,7 +25,7 @@ export default function Home() {
 
  
     <main className="h-screen flex justify-around items-center border bg-white">
-      {/* Animated Text Section */}
+    
       <motion.section
         className="flex flex-col items-center text-center gap-6 w-[400px] p-6"
         initial={{ opacity: 0, y: 50 }}
