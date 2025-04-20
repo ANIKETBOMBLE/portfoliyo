@@ -10,9 +10,31 @@ export default function Home() {
 	const sendEmail = (e) => {
 		e.preventDefault();
 		const form = e.target;
-		const formData = new FormData(form);
-		const data = Object.fromEntries(formData.entries());
-		console.log(data);
+		const name = form.elements[0].value;
+		const email = form.elements[1].value;
+		const message = form.elements[2].value;
+		if (!name || !email || !message) {
+			alert("Please fill in all fields.");
+			return;
+		}
+		if (!/\S+@\S+\.\S+/.test(email)) {
+			alert("Please enter a valid email address.");
+			return;
+		}
+		if (message.length < 10) {
+			alert("Message must be at least 10 characters long.");
+			return;
+		}
+		if (message.length > 500) {
+			alert("Message must be less than 500 characters long.");
+			return;
+		}
+		if (message.includes("spam")) {
+			alert("Message contains spam.");
+			return;
+		}
+		
+		localStorage.setItem("formData", JSON.stringify(data));
 		alert("Email sent successfully!");
 		form.reset();
 		
@@ -34,7 +56,7 @@ export default function Home() {
         className="flex flex-col items-center text-center gap-6 w-[400px] p-6"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 2, ease: "easeOut" }}
       >
         <h2 className="text-5xl font-bold">Hello..</h2>
         <p className="text-3xl font-roboto">I'M ANIKET BOMBLE</p>
@@ -81,7 +103,7 @@ export default function Home() {
 	</main>
 	
 		<div className="main-div  h-screen w-full  flex flex-col flex-nowrap   bg-slate-300">
-		<section className='text-center text-3xl  m-5 '>ABOUT ME</section>
+		<section className='text-center text-3xl  m-5 ' id='#about'>ABOUT ME</section>
 		<div className="main flex flex-row justify-center items-center mt-30 gap-10">
 		<div className="left-div flex flex-col w-100 h-100  border p-10 bg-white text-black rounded-lg ">
 			<h1 className='text-xl mb-10'>Send A Message</h1>
