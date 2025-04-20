@@ -7,11 +7,11 @@ import { IoLogoInstagram } from "react-icons/io";
 import { motion } from "framer-motion";
 import myiMage from './assest/IMG.jpg';
 import { CgMenuMotion } from "react-icons/cg";
-import ContactSection from './About.jsx';
 import S from './S.jsx';
-import About from './About.jsx';
+import About from './About';
 import Footer from './compontus/Footer.jsx';
 import Project from './project.jsx';
+
 
 
 

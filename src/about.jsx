@@ -6,7 +6,7 @@ import { CiLinkedin } from 'react-icons/ci';
 import { IoLogoInstagram } from 'react-icons/io';
 
 export default function About() {
- {
+ 
 	const sendEmail = (e) => {
 		e.preventDefault();
 		const form = e.target;
@@ -94,4 +94,4 @@ export default function About() {
 		</div>
 	);
 }
-}
+
