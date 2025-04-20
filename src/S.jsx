@@ -4,7 +4,7 @@ import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGithub } from 'react-ico
 import { SiExpressvpn, SiMongodb, SiTailwindcss } from 'react-icons/si';
 
 
-export default function skills() {
+export default function S() {
 
 const skills = [
   { icon: <FaHtml5 />, label: 'HTML' },
@@ -48,7 +48,13 @@ const SkillsSection = () => {
       </section>
     </main>
   );
-};
 }
+  return (
+    <div>
+      <SkillsSection />
+    </div>
+  );
+};
+
 
 

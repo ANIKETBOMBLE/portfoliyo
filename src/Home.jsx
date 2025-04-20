@@ -7,8 +7,8 @@ import { IoLogoInstagram } from "react-icons/io";
 import { motion } from "framer-motion";
 import myiMage from './assest/IMG.jpg';
 import { CgMenuMotion } from "react-icons/cg";
-import Skills from './skills';
 import ContactSection from './about';
+import S from './S.jsx';
 
 
 
@@ -62,7 +62,7 @@ alt='Profile' />
 	</section>
 	</main>
 	<main className='h-100 border'>
-	<Skills/>
+            	<S />
 	</main>
 	<main>
 	<ContactSection />
