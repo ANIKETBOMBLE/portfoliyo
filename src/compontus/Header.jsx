@@ -23,9 +23,9 @@ export default function Header() {
 		<h1 className='font-bold p-4 text-2xl'>Hello..Coders!!</h1>
 		<ul className='flex gap-15 underline'> 
 	
-			<li className='hover:black hover:font-semibold' id='#Home'>HOME</li>
-			<li className='hover:black hover:font-semibold' id='#' >PROJECTS</li>
-			<li className='hover:black hover:font-semibold'id='#About'>ABOUT ME</li>
+			<li className='hover:black hover:font-semibold' id='/'>HOME</li>
+			<li className='hover:black hover:font-semibold' id="/Skills" >PROJECTS</li>
+			<li className='hover:black hover:font-semibold'id="/about">ABOUT ME</li>
 		</ul> 
 		
 	<SocialMenu/>
