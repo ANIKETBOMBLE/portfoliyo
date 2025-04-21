@@ -10,7 +10,7 @@ import { CgMenuMotion } from "react-icons/cg";
 import S from './S.jsx';
 import A from './A.jsx';
 import Footer from './compontus/Footer.jsx';
-import Project from './project.jsx';
+import Project from './Project.jsx'
 
 
 
