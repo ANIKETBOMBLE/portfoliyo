@@ -10,7 +10,7 @@ import { CgMenuMotion } from "react-icons/cg";
 import S from './S.jsx';
 import A from './A.jsx';
 import Footer from './compontus/Footer.jsx';
-import Project from './Project.jsx'
+import P from './P.jsx';
 
 
 
@@ -52,7 +52,7 @@ alt='Profile' />
         {/* //   src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"     alt="Profile" */}
 </motion.section></main>
 
-  <main><Project /></main>
+  <main><P /></main>
 	<main><S /></main>
 	<main><A  /></main>
   <main><Footer /></main>

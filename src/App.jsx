@@ -8,7 +8,7 @@ import Footer from "./compontus/Footer";
 import Home from './Home';
 import Skills from './S.jsx';
 import About from './A.jsx' 
-import Project from './project.jsx';
+import P from './P.jsx';
 
 
 
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
         element: <About />
       },{
         path: "/project",
-        element:<Project />
+        element:<P />
       }
     ]
   }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Project() {
+export default function P() {
   return (
 	<main className='h-screen border bg-white'>
 		<section  className='text-center text-4xl mt-10  hover:underline font-light '>PROJECTS</section>
