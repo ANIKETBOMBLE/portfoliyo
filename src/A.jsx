@@ -42,7 +42,7 @@ export default function A() {
 	};
 
 	return (
-		<div className="main-div h-screen w-full flex flex-col bg-gradient-to-br from-blue-200 via-indigo-200 to-purple-100 p-5">
+		<div className="main-div h-screen w-full flex flex-col bg-gradient-to-br bg-black text-white p-5">
 			<section className="text-center text-3xl font-semibold text-gray-800 mt-5">ABOUT ME</section>
 
 			<div className="main flex flex-col lg:flex-row justify-center items-center mt-10 gap-10">

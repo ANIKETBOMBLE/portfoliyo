@@ -30,7 +30,7 @@ const SocialMenu = () => {
           >
             <motion.span whileHover={{ scale: 1.2 }}>
               <a href="https://github.com/ANIKETBOMBLE" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="w-10 h-10 text-gray-700 hover:text-black transition-colors duration-200" />
+                <FaGithub className="w-10 h-10 text-gray-700 hover:text-gray-400 transition-colors duration-200" />
               </a>
             </motion.span>
 

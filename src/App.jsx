@@ -12,7 +12,7 @@ import P from './P.jsx';
 
 
 
-
+import { MyProvider } from './CreatreContext.jsx';
 
 
 const router = createBrowserRouter([
@@ -44,7 +44,10 @@ export default function App() {
   
   return (
     <>
-      <RouterProvider router={router} />
+    <MyProvider>
+            <RouterProvider router={router} />
+
+    </MyProvider>
       
       
     </>
