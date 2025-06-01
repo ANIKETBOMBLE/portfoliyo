@@ -21,7 +21,7 @@ export default function Header() {
 	
 	
 	<header className="flex justify-around   items-center  p-4 bg-black text-white shadow-md ">
-		<h1 className='font-bold p-4 text-2xl'>Hello..Coders!!</h1>
+		<h1 className='font-bold p-4 text-2xl'>ANIKETT</h1>
 		<ul className='flex gap-15 underline'> 
 	
 			<li className='hover:black hover:font-semibold' ><Link to="/">HOME</Link></li>
