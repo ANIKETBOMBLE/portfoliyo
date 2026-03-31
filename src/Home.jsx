@@ -32,13 +32,17 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 2, ease: "easeOut" }}
         >
-          <h2 className="text-5xl font-extrabold tracking-tight">Hello..</h2>
-          <p className="text-3xl font-semibold">I'M ANIKET BOMBLE</p>
-          <p className="text-xl font-light">Full Stack Developer</p>
-          <p className="text-base leading-relaxed text-gray-300">
-            I am a passionate full-stack developer with expertise in creating
-            dynamic and responsive web applications.
-          </p>
+        <h2 className="text-5xl font-extrabold tracking-tight">
+  Hi, I'm Aniket Bomble
+</h2>
+
+<p className="text-2xl font-semibold text-blue-400">
+  Full Stack Developer | React Enthusiast
+</p>
+
+<p className="text-base leading-relaxed text-gray-300 max-w-xl">
+  I build fast, responsive, and user-friendly web applications using modern technologies like React and Node.js. Passionate about creating clean UI and scalable solutions.
+</p>
         </motion.section>
         <div className="text-center font-semibold text-3xl">
                   <IconCloudDemo className="w-10 h-10"/>

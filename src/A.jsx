@@ -1,97 +1,115 @@
-import React from 'react'
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FaGithub } from 'react-icons/fa';
-import { CiLinkedin } from 'react-icons/ci';
-import { IoLogoInstagram } from 'react-icons/io';
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+import { FaGithub } from 'react-icons/fa'
+import { CiLinkedin } from 'react-icons/ci'
+import { IoLogoInstagram } from 'react-icons/io'
 
-export default function A() {
- 
-	const sendEmail = (e) => {
-		e.preventDefault();
-		const form = e.target;
-		const name = form.elements[0].value;
-		const email = form.elements[1].value;
-		const message = form.elements[2].value;
+export default function ContactUI() {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [error, setError] = useState('')
+  const [success, setSuccess] = useState(false)
 
-		if (!name || !email || !message) {
-			alert("Please fill in all fields.");
-			return;
-		}
-		if (!/\S+@\S+\.\S+/.test(email)) {
-			alert("Please enter a valid email address.");
-			return;
-		}
-		if (message.length < 10) {
-			alert("Message must be at least 10 characters long.");
-			return;
-		}
-		if (message.length > 500) {
-			alert("Message must be less than 500 characters long.");
-			return;
-		}
-		if (message.toLowerCase().includes("spam")) {
-			alert("Message contains spam.");
-			return;
-		}
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
 
-		const data = { name, email, message };
-		localStorage.setItem("formData", JSON.stringify(data));
-		alert("Email sent successfully!");
-		form.reset();
-	};
+  const sendEmail = (e) => {
+    e.preventDefault()
+    const { name, email, message } = formData
 
-	return (
-		<div className="main-div h-screen w-full flex flex-col bg-gradient-to-br bg-black text-white p-5">
-			<section className="text-center text-3xl font-semibold text-gray-800 mt-5">ABOUT ME</section>
+    if (!name || !email || !message) {
+      return setError('All fields are required')
+    }
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      return setError('Invalid email address')
+    }
+    if (message.length < 10) {
+      return setError('Message must be at least 10 characters')
+    }
 
-			<div className="main flex flex-col lg:flex-row justify-center items-center mt-10 gap-10">
+    localStorage.setItem('formData', JSON.stringify(formData))
+    setSuccess(true)
+    setError('')
+    setFormData({ name: '', email: '', message: '' })
+  }
 
-				
-				<motion.div
-					className="left-div flex flex-col w-full max-w-md border p-10 bg-white text-black rounded-lg shadow-lg"
-					initial={{ opacity: 0, y: 30 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.5 }}
-				>
-					<h1 className="text-xl font-medium mb-6">Send A Message</h1>
-					<form className="flex flex-col gap-5" onSubmit={sendEmail}>
-						<input type="text" placeholder="Name" className="border-2 border-black rounded-md p-2" />
-						<input type="email" placeholder="Email" className="border-2 border-black rounded-md p-2" />
-						<textarea placeholder="Message" className="border-2 border-black rounded-md p-2" rows="4"></textarea>
-						<button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white rounded-md p-2 transition duration-300">
-							Send
-						</button>
-					</form>
-				</motion.div>
+  return (
+    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-gray-800 p-6">
+      <div className="grid md:grid-cols-2 gap-8 max-w-5xl w-full">
 
-				
-				<motion.div
-					className="right-div flex flex-col w-full max-w-md p-10 text-xl text-black bg-white rounded-lg shadow-lg"
-					initial={{ opacity: 0, y: 30 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6, delay: 0.2 }}
-				>
-					<h2 className="mb-6 font-medium text-lg">GET IN TOUCH</h2>
-					<p>
-						Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you.
-						Simply fill out the form and send me a message.
-					</p>
+        {/* FORM */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-xl p-8"
+        >
+          <h1 className="text-2xl font-semibold mb-6 text-white">Send Message</h1>
 
-					<section className="flex gap-5 mt-10 text-gray-700">
-						<a href="https://github.com/ANIKETBOMBLE" target="_blank" rel="noopener noreferrer">
-							<FaGithub className="w-10 h-10 hover:text-black transition-colors duration-300 cursor-pointer" />
-						</a>
-						<a href="https://www.linkedin.com/in/aniket-bomble-5a5662301/" target="_blank" rel="noopener noreferrer">
-							<CiLinkedin className="w-10 h-10 hover:text-blue-700 transition-colors duration-300 cursor-pointer" />
-						</a>
-						<a href="https://www.instagram.com/aniket_bomble1/" target="_blank" rel="noopener noreferrer">
-							<IoLogoInstagram className="w-10 h-10 hover:text-pink-500 transition-colors duration-300 cursor-pointer" />
-						</a>
-					</section>
-				</motion.div>
-			</div>
-		</div>
-	);
+          <form onSubmit={sendEmail} className="flex flex-col gap-4">
+            <input
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Your Name"
+              className="p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 outline-none focus:ring-2 ring-blue-400"
+            />
+
+            <input
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Your Email"
+              className="p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 outline-none focus:ring-2 ring-blue-400"
+            />
+
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              rows="4"
+              placeholder="Your Message"
+              className="p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 outline-none focus:ring-2 ring-blue-400"
+            />
+
+            {error && <p className="text-red-400 text-sm">{error}</p>}
+            {success && <p className="text-green-400 text-sm">Message sent successfully!</p>}
+
+            <button
+              type="submit"
+              className="bg-blue-500 hover:bg-blue-600 transition-all duration-300 rounded-lg p-3 text-white font-medium shadow-lg"
+            >
+              Send Message
+            </button>
+          </form>
+        </motion.div>
+
+        {/* INFO */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="bg-white text-black rounded-2xl shadow-xl p-8 flex flex-col justify-between"
+        >
+          <div>
+            <h2 className="text-xl font-semibold mb-4">Let's Connect</h2>
+            <p className="text-gray-600 leading-relaxed">
+              Want to collaborate, build something amazing, or just say hello? I'm always open to interesting conversations.
+            </p>
+          </div>
+
+          <div className="flex gap-6 mt-8">
+            <a href="https://github.com/ANIKETBOMBLE" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="w-8 h-8 hover:scale-110 transition-transform" />
+            </a>
+            <a href="https://www.linkedin.com/in/aniket-bomble-5a5662301/" target="_blank" rel="noopener noreferrer">
+              <CiLinkedin className="w-8 h-8 hover:text-blue-600 hover:scale-110 transition-all" />
+            </a>
+            <a href="https://www.instagram.com/aniket_bomble1/" target="_blank" rel="noopener noreferrer">
+              <IoLogoInstagram className="w-8 h-8 hover:text-pink-500 hover:scale-110 transition-all" />
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  )
 }
-
